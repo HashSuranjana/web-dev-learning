@@ -1,5 +1,5 @@
 type propsType = {
-    name :string,
+    name :string
     age : number
 }
 
