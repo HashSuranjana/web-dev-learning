@@ -1,4 +1,5 @@
 import './App.css'
+import { Container } from './components/Container.tsx';
 import { Greet } from './components/Greet.tsx' ;
 import Heading from './components/Heading.tsx';
 import { Oscar } from './components/Oscar.tsx';
@@ -39,6 +40,8 @@ function App() {
       <Oscar>
         <Heading>Oscar is going to mr.Bean</Heading>
       </Oscar>
+
+      <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
     </div>
   )
 }
