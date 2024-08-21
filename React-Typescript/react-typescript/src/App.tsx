@@ -1,5 +1,7 @@
 import './App.css'
 import { Greet } from './components/Greet.tsx' ;
+import Heading from './components/Heading.tsx';
+import { Oscar } from './components/Oscar.tsx';
 import { Person } from './components/Person.tsx';
 import { PersonList } from './components/PersonList.tsx';
 import { Status } from './components/Status.tsx';
@@ -33,6 +35,10 @@ function App() {
       <PersonList listing={personList} /> */}
 
       <Status status= 'Error'/>
+      <Heading>Hello world</Heading>
+      <Oscar>
+        <Heading>Oscar is going to mr.Bean</Heading>
+      </Oscar>
     </div>
   )
 }
