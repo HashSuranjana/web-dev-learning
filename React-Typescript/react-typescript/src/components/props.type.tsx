@@ -3,3 +3,8 @@ export type Name = {
     lastName :string
 }
 
+export type AuthUser ={
+    name :string
+    email : string
+}
+
