@@ -1,8 +1,6 @@
+import { Name } from "./props.type"
 type personObj = {
-    name : {
-        firstName :string
-        lastName :string
-    }
+    name : Name
 }
 
 
