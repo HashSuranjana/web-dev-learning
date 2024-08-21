@@ -2,6 +2,7 @@ import './App.css'
 import { Greet } from './components/Greet.tsx' ;
 import { Person } from './components/Person.tsx';
 import { PersonList } from './components/PersonList.tsx';
+import { Status } from './components/Status.tsx';
 
 function App() {
   
@@ -27,9 +28,11 @@ function App() {
 
   return (
     <div className='App'>
-      <Greet name = 'Hash' age= {20} />
+      {/* <Greet name = 'Hash' age= {20} />
       <Person name = {person} />
-      <PersonList listing={personList} />
+      <PersonList listing={personList} /> */}
+
+      <Status status= 'Error'/>
     </div>
   )
 }
