@@ -5,6 +5,7 @@ import Heading from './components/Heading.tsx';
 import { Oscar } from './components/Oscar.tsx';
 import { Person } from './components/Person.tsx';
 import { PersonList } from './components/PersonList.tsx';
+import { Counter } from './components/state/Counter.tsx';
 import { User } from './components/state/User.tsx';
 import { Status } from './components/Status.tsx';
 
@@ -48,6 +49,8 @@ function App() {
       <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
       
       <User name = {name} email= {email}/>
+
+      <Counter />
     </div>
   )
 }
