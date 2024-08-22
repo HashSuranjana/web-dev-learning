@@ -12,6 +12,8 @@ import { Counter } from './components/state/Counter.tsx';
 import { User } from './components/state/User.tsx';
 import {Users} from './components/context/User.tsx'
 import { Status } from './components/Status.tsx';
+import { DomRef } from './components/ref/DomRef.tsx';
+import { MutableRef } from './components/ref/MutableRef.tsx';
 
 function App() {
   
@@ -50,7 +52,7 @@ function App() {
         <Heading>Oscar is going to mr.Bean</Heading>
       </Oscar> */}
 
-      <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
+      {/* <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
       
       <User name = {name} email= {email}/>
 
@@ -58,11 +60,15 @@ function App() {
 
       <ThemeContext>
           <Box/>
-      </ThemeContext>
+      </ThemeContext> */}
 
       <UserContextProvider>
           <Users/>
       </UserContextProvider>
+
+      <DomRef/>
+
+      <MutableRef/>
     </div>
   )
 }
