@@ -18,6 +18,7 @@ import { Private } from './components/auth/Private.tsx';
 import { Profile } from './components/auth/Profile.tsx';
 import { List } from './components/generics/List.tsx';
 import { RandomNumber } from './components/restriction/randomNumber.tsx';
+import { CustomButton } from './components/html/customButton.tsx';
 
 function App() {
   
@@ -83,6 +84,9 @@ function App() {
 
 
       <RandomNumber num={10} isPossitive/>
+
+      <CustomButton variant='primary' onClick={() =>{console.log('hl');
+      }}>Primary Button</CustomButton>
     </div>
   )
 }
