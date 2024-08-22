@@ -14,6 +14,8 @@ import {Users} from './components/context/User.tsx'
 import { Status } from './components/Status.tsx';
 import { DomRef } from './components/ref/DomRef.tsx';
 import { MutableRef } from './components/ref/MutableRef.tsx';
+import { Private } from './components/auth/Private.tsx';
+import { Profile } from './components/auth/Profile.tsx';
 
 function App() {
   
@@ -69,6 +71,8 @@ function App() {
       <DomRef/>
 
       <MutableRef/>
+
+      <Private  isLoggedIn = {true} component={Profile}/>
     </div>
   )
 }
