@@ -17,6 +17,7 @@ import { MutableRef } from './components/ref/MutableRef.tsx';
 import { Private } from './components/auth/Private.tsx';
 import { Profile } from './components/auth/Profile.tsx';
 import { List } from './components/generics/List.tsx';
+import { RandomNumber } from './components/restriction/randomNumber.tsx';
 
 function App() {
   
@@ -78,6 +79,10 @@ function App() {
       <List list={[{id : 1,name:'hash'},
                     {id : 2, name:"John"}
       ]} onClick={(item)=>{console.log(item)}}/>
+
+
+
+      <RandomNumber num={10} isPossitive/>
     </div>
   )
 }
