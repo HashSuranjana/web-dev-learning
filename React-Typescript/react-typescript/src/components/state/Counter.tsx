@@ -8,10 +8,16 @@ type stateType = {
     count : number
 }
 
-type actionType = {
-    type : string
+type updateAction = {
+    type : 'increment' | 'decrement'
     payload : number
 }
+
+type resetAction = {
+    type : 'reset'
+}
+
+type actionType = updateAction | resetAction
 
 const reducer = (state : stateType,action : actionType) => {
     switch(action.type) {
@@ -22,7 +28,7 @@ const reducer = (state : stateType,action : actionType) => {
             return {count : state.count - action.payload}
         
         case 'reset' :
-            return {count : 0 - action.payload}
+            return initialState
         default :
             return state
     }
@@ -42,7 +48,7 @@ export const Counter = () => {
             <h3>Counter : {state.count}</h3>
             <button onClick={() => dispatch({type : 'increment',payload : 10})}>Increment</button>
             <button onClick={() => dispatch({type : 'decrement',payload : 10})}>Decrement</button>
-            <button onClick={() => dispatch({type : 'reset',payload : 0})}>Reset</button>
+            <button onClick={() => dispatch({type : 'reset'})}>Reset</button>
             
         </div>
     )
