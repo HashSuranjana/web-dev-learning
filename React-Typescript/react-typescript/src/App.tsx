@@ -1,5 +1,7 @@
 import './App.css'
 import { Container } from './components/Container.tsx';
+import { Box } from './components/context/Box.tsx';
+import { ThemeContext } from './components/context/ThemeContext.tsx';
 import { Greet } from './components/Greet.tsx' ;
 import Heading from './components/Heading.tsx';
 import { Oscar } from './components/Oscar.tsx';
@@ -40,17 +42,21 @@ function App() {
       <Person name = {person} />
       <PersonList listing={personList} /> */}
 
-      <Status status= 'Error'/>
+      {/* <Status status= 'Error'/>
       <Heading>Hello world</Heading>
       <Oscar>
         <Heading>Oscar is going to mr.Bean</Heading>
-      </Oscar>
+      </Oscar> */}
 
       <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
       
       <User name = {name} email= {email}/>
 
       <Counter />
+
+      <ThemeContext>
+          <Box/>
+      </ThemeContext>
     </div>
   )
 }
