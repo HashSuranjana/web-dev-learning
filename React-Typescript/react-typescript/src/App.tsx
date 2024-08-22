@@ -30,6 +30,9 @@ function App() {
     }
   ]
 
+  const name:string = 'John' 
+  const email:string = 'john@gmail.com'
+
   return (
     <div className='App'>
       {/* <Greet name = 'Hash' age= {20} />
@@ -43,7 +46,8 @@ function App() {
       </Oscar>
 
       <Container  style = {{ padding : '20px',backgroundColor : 'red',border:'2px solid green' }}/>
-      <User/>
+      
+      <User name = {name} email= {email}/>
     </div>
   )
 }

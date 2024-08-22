@@ -1,16 +1,16 @@
 import { useState } from "react"
 import { AuthUser } from "../props.type"
 
-export const User  =()=>{
+export const User  =(props :AuthUser)=>{
 
-    const[user,setUser] = useState<AuthUser | null>(null)
+    const[user,setUser] = useState<AuthUser | null>({} as AuthUser)
 
     const handleSignIn =() =>{
 
         setUser (
             {
-                name :'Hash',
-                email :'hash@gmail.com'
+                name : props.name,
+                email :props.email
             }
         )
         
@@ -26,7 +26,7 @@ export const User  =()=>{
     if (user === null ){
         message = "name : email"
     }else{
-        message = user?.name+ " : " +user?.email
+        message = user.name+ " : " +user.email
     }
     return (
         <div>
