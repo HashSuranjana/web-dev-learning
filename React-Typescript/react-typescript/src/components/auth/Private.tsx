@@ -14,4 +14,5 @@ export const Private = ({isLoggedIn , component : Component} : privateProps) => 
         return <Login/>
     }
 
+    
 }
